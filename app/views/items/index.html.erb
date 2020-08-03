@@ -1,0 +1,7 @@
+<h1>Congrats you're in Index</h1>
+
+<ul style="list-style-type:none">
+   <li><% @items.each do |item| %></li>
+   <li><%= item.name %> <br> <%= item.description %> </li>
+   <% end %>
+</ul>

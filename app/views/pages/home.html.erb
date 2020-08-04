@@ -6,10 +6,9 @@
   <div class="container">
     <h1>Always wanted to try a new sport?</h1>
     <p>Rent sport eqipment for short period from privates  and have fun without spending a fortune!</p>
-    <a class="btn-primary" href="#">Explore!</a>
-  </div>
+    <%= link_to "Explore", items_path, class: "btn-primary" %>
 
-  <form>
+    <form>
     <div class="form-row">
       <div class="col-6">
         <input type="text" class="form-control" placeholder="For which sport?">
@@ -28,6 +27,10 @@
       </div>
     </div>
   </form>
+
+  </div>
+
+  
 </div>
 
 
@@ -64,6 +67,14 @@
 </div>
 
 
+
+<div class="container my-5">
+  <div class="row justify-content-md-center">
+    <div class="col-md-4 text-center">
+      <%= link_to "Explore More", items_path, class: "btn-primary" %>
+    </div>
+  </div>
+</div>
 
 
 <!-- eventually footer section -->

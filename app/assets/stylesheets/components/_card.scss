@@ -1,4 +1,20 @@
 // Cards
+.card {
+  width: 330px;
+  border-radius: 3px;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid rgb(230,230,230);
+}
+
+.card img {
+  height: 200px;
+  widows: auto;
+}
+
+.card p {
+  opacity: .5;
+}
 
 .card-category {
     background-size: cover;
@@ -20,39 +36,43 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 16px;
   }
-  
+
+  #index-items{
+  .cards{
+        grid-template-columns: 1fr 1fr;
+  }
+  }
   // Smallest device
   @media (min-width: 100px) and (max-width: 575px) {
     .cards {
       grid-template-columns: 1fr;
     }
   }
-  
+
   // Small devices (landscape phones, 576px and up)
   @media (min-width: 576px) {
     .cards {
       grid-template-columns: 1fr;
     }
   }
-  
+
   // Medium devices (tablets, 768px and up)
   @media (min-width: 768px) {
     .cards {
       grid-template-columns: 1fr 1fr;
     }
   }
-  
+
   // Large devices (desktops, 992px and up)
   @media (min-width: 992px) {
     .cards {
       grid-template-columns: 1fr 1fr 1fr;
     }
   }
-  
+
   // Extra large devices (large desktops, 1200px and up)
   @media (min-width: 1200px) {
     .cards {
       grid-template-columns: 1fr 1fr 1fr;
     }
   }
-  

@@ -17,8 +17,6 @@ h1 {
   grid-template-columns: 1fr;
 }
 
-.cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+#renter h1, p {
+  text-align: end;
 }
-

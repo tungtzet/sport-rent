@@ -5,20 +5,12 @@ h1, h2, h3, h4, p {
   font-family: 'Open Sans', sans-serif;
 }
 
-.banner {
+#home-second-ph {
+  .banner {
   background-size: cover;
   background-position: center;
-  padding: 200px 0;
-}
-
-.banner h1 {
-  color: white;
-}
-
-.banner p {
-  color: white;
-  opacity: .7;
-  font-size: 20px;
+  padding: 150px 0;
+  }
 }
 
 .btn-primary {
@@ -31,15 +23,6 @@ h1, h2, h3, h4, p {
 
 .form-row {
   padding: 30px;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 25px;
-  // justify-content: space-between;
-  margin-bottom: 30px;
-  margin-right: 20px;
 }
 
 .card {

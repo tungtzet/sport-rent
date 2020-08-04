@@ -34,8 +34,10 @@ h1, h2, h3, h4, p {
 }
 
 .cards {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 25px;
+  // justify-content: space-between;
   margin-bottom: 30px;
   margin-right: 20px;
 }

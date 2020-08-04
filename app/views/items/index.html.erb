@@ -2,9 +2,10 @@
 
 <ul style="list-style-type:none">
    <li><% @items.each do |item| %></li>
-   <li><%= item.name %> <br> <%= item.description %> <div class="cards">
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://source.unsplash.com/1600x900/?surfboard')">
-  </div> </li>
+   <li><%= item.name %> <br> <%= item.description %>
+   <div class="cards">
+   <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://source.unsplash.com/1600x900/?surfboard')">
+   </div></li>
    <li><%= link_to 'Back', root_path %> <%= link_to 'Rent', root_path %> </li>
    <% end %>
 </ul>

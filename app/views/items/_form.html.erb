@@ -4,8 +4,8 @@
   <%= f.text_field :name, class: 'form-control' %>
 </div>
 <div class="form-group">
-  <%= f.label :category, class: 'form-control' %>
-  
+  <%= f.label :category %>
+  <%= f.select :category, Item::SPORT_TYPES %>
 </div>
  <div class="form-group">
     <%= f.label :photos %>

@@ -17,14 +17,16 @@ class ItemsController < ApplicationController
     authorize @item
   end
 
-  def created
+  def create
     @item = Item.new(item_params)
+    @item.user = current_user
     if @item
       @item.save
       redirect_to item_path(@item)
     else
       render new
     end
+    authorize @item
   end
 
   private

@@ -4,6 +4,20 @@ class ItemsController < ApplicationController
     @items = policy_scope(Item).order(created_at: :desc)
   end
 
+  def new
+    @item = Item.new
+  end
+
+  def created
+    @item = Item.new(item_params)
+    if @item
+      @item.save
+      redirect_to item_path(@item)
+    else
+      render new
+    end
+  end
+
   private
 
   def set_item

@@ -5,6 +5,14 @@ h1, h2, h3, h4, p {
   font-family: 'Open Sans', sans-serif;
 }
 
+
+#home-second-ph {
+  .banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  }
+
 .btn-primary {
   display: inline-block;
   background-color: #f25f5c;
@@ -25,13 +33,6 @@ h1, h2, h3, h4, p {
   padding: 30px;
 }
 
-.cards {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 30px;
-  margin-right: 20px;
-}
-
 .card {
   width: 330px;
   border-radius: 3px;
@@ -48,6 +49,15 @@ h1, h2, h3, h4, p {
 
 .card p {
   opacity: .5;
+}
+
+#titles {
+  border: 1px solid rgb(230,230,230);
+  border-radius: 2px;
+  margin-top: 10px;
+  box-shadow: 0 0 5px rgb(230,230,230);
+  padding: 10px;
+
 }
 
 .footer {
@@ -68,5 +78,4 @@ h1, h2, h3, h4, p {
 .footer .fas {
   color: #BF0F12;
 }
-
 

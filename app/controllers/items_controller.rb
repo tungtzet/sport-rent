@@ -4,6 +4,7 @@ class ItemsController < ApplicationController
   def show
     set_item
     authorize @item
+  end
 
   def index
     @items = Item.all
@@ -12,6 +13,7 @@ class ItemsController < ApplicationController
 
   def new
     @item = Item.new
+    authorize @item
   end
 
   def created
@@ -27,10 +29,11 @@ class ItemsController < ApplicationController
   private
 
   def set_item
-    Item.find(params[:id])
+    @item = Item.find(params[:id])
   end
 
   def item_params
     params.require(:item).permit(:name, :category, :description, :location, :price_per_day)
   end
+
 end

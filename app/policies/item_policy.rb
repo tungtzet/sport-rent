@@ -8,4 +8,10 @@ class ItemPolicy < ApplicationPolicy
   def show?
     true
   end
+
+
+  def index?
+    return true
+  end
+  
 end

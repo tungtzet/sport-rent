@@ -4,12 +4,11 @@
 
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://source.unsplash.com/1600x900/?sport,extreme');">
   <div class="container">
-    <h1>Always wanted to try a new sport?</h1>
+    <h1>Always wanted to try a new sport?</h1> <br>
     <p>Rent sport eqipment for short period from privates  and have fun without spending a fortune!</p>
-    <a class="btn-primary" href="#">Explore!</a>
-  </div>
+    <%= link_to "Explore", items_path, class: "btn-primary" %>
 
-  <form>
+    <form>
     <div class="form-row">
       <div class="col-6">
         <input type="text" class="form-control" placeholder="For which sport?">
@@ -23,20 +22,50 @@
       <div class="col">
         <input type="text" class="form-control" placeholder="Where?">
       </div>
+      <div class="col">
+        <a class="btn-secondary" href="#">Go!</a>
+      </div>
     </div>
   </form>
+
+  </div>
+
+  
 </div>
+
+
+
+<!-- section for big pictures with explanation of the platform -->
+<div class="container">
+  <div class="container">
+    <h2 class="text-center" id="titles" >How does it work</h2>
+  </div>
+
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://source.unsplash.com/1600x900/?kayak');">
+    <div id= "renter" class="container">
+      <h1>Rent from other people without hassle, just few clicks and your item will be reserved.</h1> <br>
+      <p>Talk with the owner and organize the pick up</p>
+      <a class="btn-primary" href="#">Explore!</a>
+  </div>
+  </div>
+  <br>
+
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://source.unsplash.com/1600x900/?garage');">
+    <div id="owner" class="container">
+      <h1>Don't let your stuff getting dusty in the garage</h1> <br>
+      <p>Most of your equipment is not used in 80 % of the time. Rent it and earn some money.</p>
+      <a class="btn-primary" href="#">Explore!</a>
+  </div>
+  </div>
+</div>
+
+
 
 
 
 <!-- cards section  -->
-
 <div class="container">
-  <h2 class="text-center">How does it work</h2>
-</div>
-
-<div class="container">
-  <h2 class="text-center">Last added products</h2>
+  <h2 class="text-center" id="titles" >Last added products</h2>
   <div class="cards">
 
     <div class="card">
@@ -61,17 +90,10 @@
 </div>
 
 
-
-
-<!-- eventually footer section -->
-
-  <div class="footer">
-    <div class="links">
-      <a href="#"><i class="fab fa-fw fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-fw fa-github"></i></a>
-      <a href="#"><i class="fab fa-fw fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-fw fa-instagram"></i></a>
-      <p>This website is coded with lots of <i class="fas fa-heart"></i> from the 3 musketeers.</p>
-
+<div class="container my-5">
+  <div class="row justify-content-md-center">
+    <div class="col-md-4 text-center">
+      <%= link_to "Explore More", items_path, class: "btn-primary" %>
     </div>
   </div>
+</div>

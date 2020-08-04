@@ -5,21 +5,13 @@ h1, h2, h3, h4, p {
   font-family: 'Open Sans', sans-serif;
 }
 
-.banner {
+
+#home-second-ph {
+  .banner {
   background-size: cover;
   background-position: center;
-  padding: 200px 0;
-}
-
-.banner h1 {
-  color: white;
-}
-
-.banner p {
-  color: white;
-  opacity: .7;
-  font-size: 20px;
-}
+  padding: 150px 0;
+  }
 
 .btn-primary {
   display: inline-block;
@@ -29,15 +21,16 @@ h1, h2, h3, h4, p {
   color: white;
 }
 
-.form-row {
-  padding: 30px;
+.btn-secondary {
+  display: inline-block;
+  background-color: #f25f5c;
+  padding: 8px 20px;
+  border-radius: 50px;
+  color: white;
 }
 
-.cards {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 30px;
-  margin-right: 20px;
+.form-row {
+  padding: 30px;
 }
 
 .card {
@@ -58,6 +51,15 @@ h1, h2, h3, h4, p {
   opacity: .5;
 }
 
+#titles {
+  border: 1px solid rgb(230,230,230);
+  border-radius: 2px;
+  margin-top: 10px;
+  box-shadow: 0 0 5px rgb(230,230,230);
+  padding: 10px;
+
+}
+
 .footer {
   text-align: center;
   padding: 60px;
@@ -76,5 +78,4 @@ h1, h2, h3, h4, p {
 .footer .fas {
   color: #BF0F12;
 }
-
 

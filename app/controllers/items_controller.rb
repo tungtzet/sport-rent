@@ -4,6 +4,7 @@ class ItemsController < ApplicationController
   def show
     set_item
     authorize @item
+    @booking = Booking.new
   end
 
   def index

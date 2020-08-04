@@ -1,13 +1,14 @@
-<h1>Congrats you're in Index</h1>
+<div class="container">
+   <h1>All Amazing Sport Equipment Around You</h1>
 
-<ul style="list-style-type:none">
-   <li><% @items.each do |item| %></li>
-   <li><%= item.name %> <br> <%= item.description %> <div class="cards">
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://source.unsplash.com/1600x900/?surfboard')">
-  </div> </li>
-   <li><%= link_to 'Back', root_path %> <%= link_to 'Rent', root_path %> </li>
-   <% end %>
-</ul>
+      <ul style="list-style-type:none">
+      <% @items.each do |item| %>
+         <li><%= item.name %> | <%= item.description %>  | <%= link_to 'Rent', item_path(item) %></li> 
+      <% end %>
+      </ul>
+<%= link_to 'Back', root_path %> 
+</div>
+
 
 
 

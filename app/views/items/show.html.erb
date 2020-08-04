@@ -1,0 +1,11 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://source.unsplash.com/1600x900/?sport,extreme');">
+  <div class="container">
+    <h1><%= @item.name %></h1>
+    <h4><%= @item.category %></h4>
+  </div>
+</div>
+
+<div class="container">
+  <p><%= @item.description %></p>
+  <p><%= @item.location %> | $<%= @item.price_per_day %></p>
+</div>

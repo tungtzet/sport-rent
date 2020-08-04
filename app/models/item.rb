@@ -1,5 +1,5 @@
 class Item < ApplicationRecord
-  SPORT_TYPES = ["Sky Diving", "Sky Surfing", "Watersports", "Golf", "Biking", "Motor Racing", "Tennis", "Hockey", "Bungee Jumping", "Ice Skating", "Skiing" ]
+  SPORT_TYPES = ["Sky Diving", "Stratosphere Diving","Sky Surfing", "Watersports", "Golf", "Biking", "Motor Racing", "Tennis", "Hockey", "Bungee Jumping", "Ice Skating", "Skiing" ]
   belongs_to :user
   has_many :bookings, dependent: :destroy
   has_many_attached :photos

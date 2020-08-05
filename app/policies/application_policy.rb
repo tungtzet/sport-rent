@@ -15,7 +15,7 @@ class ApplicationPolicy
   end
 
   def create?
-    false
+    true
   end
 
   def new?
@@ -23,7 +23,7 @@ class ApplicationPolicy
   end
 
   def update?
-    false
+    user_is_owner
   end
 
   def edit?
@@ -31,7 +31,7 @@ class ApplicationPolicy
   end
 
   def destroy?
-    false
+    true
   end
 
   class Scope
@@ -45,5 +45,9 @@ class ApplicationPolicy
     def resolve
       scope.all
     end
+  end
+
+  def user_is_owner
+    record.user == user
   end
 end

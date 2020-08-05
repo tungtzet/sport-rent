@@ -11,11 +11,15 @@ class ItemPolicy < ApplicationPolicy
 
 
   def index?
-    return true
+    true
   end
 
   def create?
-    return true
+    true
+  end
+
+  def destroy?
+    record.user == user
   end
   
 end

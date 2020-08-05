@@ -13,7 +13,9 @@
       <h3>Details</h3>
       <h4><%= @item.description %> <br><%= @item.location %></h4>
       <h5>Offered by <%= @item.user.email %></h5> <br>
-      <%= link_to "Back to list", items_path, class: "btn-primary" %>
+      <%= link_to "Back to list", items_path, class: "btn-primary" %> 
+      <%= link_to "Edit", edit_item_path, class: "btn-primary" %>
+      <%= link_to "Delete Item", item_path(@item),data: { confirm: 'Are you sure?'}, method: :delete, class: "btn-primary"%>
     </div>
 
     <div class="form col-md-6" id="dates-form">

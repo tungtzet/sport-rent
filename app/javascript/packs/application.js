@@ -24,8 +24,8 @@ require("channels")
 
 // External imports
 import "bootstrap";
-import flatpickr from "flatpickr";
-import 'flatpickr/dist/flatpickr.min.css'
+// import flatpickr from "flatpickr";
+// import 'flatpickr/dist/flatpickr.min.css'
 import { initMapbox } from '../plugins/init_mapbox';
 import { initAutocomplete } from '../plugins/init_autocomplete'
 
@@ -37,8 +37,8 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   initMapbox();
-  flatpickr("#start_date", {});
-  flatpickr("#end_date", {});
+//   flatpickr("#start_date", {});
+//   flatpickr("#end_date", {});
   initAutocomplete();
 });
 

@@ -13,6 +13,7 @@
       <h3>Details</h3>
       <p><%= @item.description %></p>
       <p><%= @item.location %></p>
+      <p>Offered by <%= @item.user.email %></p>
       <%= link_to "Back to list", items_path, class: "btn-primary" %>
     </div>
       

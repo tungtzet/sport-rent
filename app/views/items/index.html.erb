@@ -1,14 +1,3 @@
-<div class="container">
-
-
-      <ul style="list-style-type:none">
-      <% @items.each do |item| %>
-         <li><%= item.name %> | <%= item.description %>  | <%= link_to 'Rent', item_path(item) %> <%= link_to "Delete", item, method: :delete %></li>
-      <% end %>
-      </ul>
-<%= link_to 'Back', root_path %>
-</div>
-
 <div class="banner" id="banner-index" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://source.unsplash.com/1600x900/?sport,extreme');">
   <h1>Your search results:</h1>
 
@@ -17,63 +6,19 @@
 <div class="main-container" id="index-items">
   <div class="container" id="cards-container">
     <div class="cards">
-
+    <% @items.each do |item| %>
       <div class="card">
-        <img src="https://source.unsplash.com/1600x900/?kite-surf" alt="">
-        <h4>Kite surf</h4>
-        <p>Rent for a day 10$.</p>
+        <%= cl_image_tag item.photos.first.key if item.photos.first %>
+        <h4><%= item.name %></h4>
+        <p><%= link_to "Rent for $#{item.price_per_day} a day", item_path(item) %></p>
       </div>
-
-
-      <div class="card ">
-        <img src="https://source.unsplash.com/1600x900/?Kayak" alt="">
-        <h4>kayak</h4>
-        <p>Rent for a day 10$.</p>
-      </div>
-
-      <div class="card">
-        <img src="https://source.unsplash.com/1600x900/?Snowboard" alt="">
-        <h4>Ski</h4>
-        <p>Rent for a day 10$.</p>
-      </div>
-      <div class="card">
-        <img src="https://source.unsplash.com/1600x900/?sailing, boat" alt="">
-        <h4>Sailing boat</h4>
-        <p>Rent for a day 10$.</p>
-      </div>
-
-      <div class="card">
-        <img src="https://source.unsplash.com/1600x900/?Jetski" alt="">
-        <h4>Jetski</h4>
-        <p>Rent for a day 10$.</p>
-      </div>
-
-      <div class="card">
-        <img src="https://source.unsplash.com/1600x900/?waterski" alt="">
-        <h4>Water Ski</h4>
-        <p>Rent for a day 10$.</p>
-      </div>
-            <div class="card">
-        <img src="https://source.unsplash.com/1600x900/?glider, plane" alt="">
-        <h4>Glider</h4>
-        <p>Rent for a day 10$.</p>
-      </div>
-
-      <div class="card">
-        <img src="https://source.unsplash.com/1600x900/?windsurf" alt="">
-        <h4>Windsurf</h4>
-        <p>Rent for a day 10$.</p>
-      </div>
-
-      <div class="card">
-        <img src="https://source.unsplash.com/1600x900/?paragliding" alt="">
-        <h4>Paragliding</h4>
-        <p>Rent for a day 10$.</p>
-      </div>
-
+    <% end %>
     </div>
   </div>
 
-  <img id="map" src='https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/2.3381,48.8693,10.45,0,0/600x1000?access_token=pk.eyJ1Ijoibmljb2xvdG9yIiwiYSI6ImNrY3E2cmF3ODEyOXEycWxmMjZyamZ0bG4ifQ.CvYrnkQtGj2zuxuAFViPtQ'>
-
+  <div id="map"
+     style="width: 100%; height: 100vh;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
 </div>

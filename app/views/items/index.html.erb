@@ -74,6 +74,8 @@
     </div>
   </div>
 
-  <img id="map" src='https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/2.3381,48.8693,10.45,0,0/600x1000?access_token=pk.eyJ1Ijoibmljb2xvdG9yIiwiYSI6ImNrY3E2cmF3ODEyOXEycWxmMjZyamZ0bG4ifQ.CvYrnkQtGj2zuxuAFViPtQ'>
-
+  <div id="map"
+     style="width: 100%; height: 100vh;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 </div>

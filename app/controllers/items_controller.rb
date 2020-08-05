@@ -8,7 +8,14 @@ class ItemsController < ApplicationController
   end
 
   def index
-    @items = Item.all
+    @items = Item.geocoded # returns flats with coordinates
+
+    @markers = @items.map do |item|
+      {
+        lat: item.latitude,
+        lng: item.longitude
+      }
+    end
     @items = policy_scope(Item).order(created_at: :desc)
   end
 

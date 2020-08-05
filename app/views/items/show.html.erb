@@ -1,4 +1,4 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path @item.photos.first.key %>);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path @item.photos.first.key if @item.photos.first %>);">
   <div class="container">
     <h1><%= @item.name %></h1>
     <h4><%= @item.category %></h4>

@@ -20,12 +20,13 @@ h1, h2, h3, h4, p {
   padding: 16px 36px;
   border-radius: 50px;
   color: white;
+  border: none;
 }
 
 .btn-primary:hover {
-box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-background-color: #f36f6c;
-}
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  background-color: #f36f6c;
+  }
 
 .btn-secondary {
   display: inline-block;
@@ -36,9 +37,9 @@ background-color: #f36f6c;
 }
 
 .btn-secondary:hover {
-box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-background-color: #f36f6c;
-}
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  background-color: #f36f6c;
+  }
 
 .form-row {
   padding: 30px;

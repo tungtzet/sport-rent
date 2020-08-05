@@ -1,0 +1,36 @@
+#showpage {
+  p {
+    text-align: left;
+  }
+}
+
+#dates-form {
+  border: 2px solid rgb(230,230,230);
+  border-radius: 30px;
+  padding: 20px;
+  box-shadow: 0 0 5px rgb(230,230,230);
+  // background-color: red;
+}
+
+#showpage {
+}
+
+#item-details {
+  border: 2px solid rgb(230,230,230);
+  border-radius: 30px;
+  padding: 20px;
+  box-shadow: 0 0 5px rgb(230,230,230);
+}
+
+#item-deep-details {
+  h3, h4 {
+  border: 2px solid rgb(230,230,230);
+  border-radius: 30px;
+  padding: 20px;
+  box-shadow: 0 0 5px rgb(230,230,230);
+  }
+
+  h5 {
+    text-align: right;
+  }
+}

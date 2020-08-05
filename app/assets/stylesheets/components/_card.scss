@@ -1,11 +1,14 @@
 // Cards
 .card {
   width: 330px;
-  border-radius: 3px;
+  border-radius: 30px;
   text-align: center;
   padding: 20px;
-  border: 1px solid rgb(230,230,230);
+  border: 9px solid black;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
+
+// rgb(230,230,230)
 
 .card img {
   height: 200px;

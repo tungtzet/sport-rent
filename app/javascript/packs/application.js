@@ -24,8 +24,8 @@ require("channels")
 
 // External imports
 import "bootstrap";
-import flatpickr from "flatpickr";
-import 'flatpickr/dist/flatpickr.min.css'
+// import flatpickr from "flatpickr";
+// import 'flatpickr/dist/flatpickr.min.css'
 
 
 // Internal imports, e.g:
@@ -34,7 +34,7 @@ import 'flatpickr/dist/flatpickr.min.css'
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
-  flatpickr("#start_date", {});
-  flatpickr("#end_date", {});
+  // flatpickr("#start_date", {});
+  // flatpickr("#end_date", {});
 });
 

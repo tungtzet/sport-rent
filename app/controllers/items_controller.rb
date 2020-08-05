@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
 
-  skip_before_action :authenticate_user!, only: [:index, :show]
+  skip_before_action :authenticate_user!, only: [:index, :show, :destroy]
   def show
     set_item
     authorize @item
@@ -26,6 +26,29 @@ class ItemsController < ApplicationController
     else
       render new
     end
+    authorize @item
+  end
+
+  def edit
+    set_item
+    authorize @item
+  end
+
+  def update
+    set_item
+    if current_user
+      @item.update(item_params)
+      redirect_to items_path(@item)
+    else
+      render new
+    end
+    authorize @item
+  end
+
+  def destroy
+    @item = Item.find(params[:id])
+    @item.destroy
+    redirect_to items_path
     authorize @item
   end
 

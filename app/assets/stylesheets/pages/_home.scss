@@ -22,6 +22,11 @@ h1, h2, h3, h4, p {
   color: white;
 }
 
+.btn-primary:hover {
+box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+background-color: #f36f6c;
+}
+
 .btn-secondary {
   display: inline-block;
   background-color: #f25f5c;
@@ -30,26 +35,13 @@ h1, h2, h3, h4, p {
   color: white;
 }
 
+.btn-secondary:hover {
+box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+background-color: #f36f6c;
+}
+
 .form-row {
   padding: 30px;
-}
-
-.card {
-  width: 330px;
-  border-radius: 3px;
-  box-shadow: 0 0 5px rgb(230,230,230);
-  text-align: center;
-  padding: 20px;
-  border: 1px solid rgb(230,230,230);
-}
-
-.card img {
-  height: 200px;
-  widows: auto;
-}
-
-.card p {
-  opacity: .5;
 }
 
 #titles {
@@ -74,6 +66,7 @@ h1, h2, h3, h4, p {
 
 .footer p {
   color: #6B6C6C;
+  text-align: center;
 }
 
 .footer .fas {

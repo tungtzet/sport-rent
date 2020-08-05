@@ -1,16 +1,21 @@
 <div class="container">
-   <h1>Your search results</h1>
+
 
       <ul style="list-style-type:none">
       <% @items.each do |item| %>
-         <li><%= item.name %> | <%= item.description %>  | <%= link_to 'Rent', item_path(item) %></li> 
+         <li><%= item.name %> | <%= item.description %>  | <%= link_to 'Rent', item_path(item) %></li>
       <% end %>
       </ul>
-<%= link_to 'Back', root_path %> 
+<%= link_to 'Back', root_path %>
+</div>
+
+<div class="banner" id="banner-index" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://source.unsplash.com/1600x900/?sport,extreme');">
+  <h1>Your search results:</h1>
+
 </div>
 
 <div class="main-container" id="index-items">
-  <div class="container">
+  <div class="container" id="cards-container">
     <div class="cards">
 
       <div class="card">
@@ -32,37 +37,37 @@
         <p>Rent for a day 10$.</p>
       </div>
       <div class="card">
-        <img src="https://source.unsplash.com/1600x900/?kite-surf" alt="">
-        <h4>Kite surf</h4>
+        <img src="https://source.unsplash.com/1600x900/?sailing, boat" alt="">
+        <h4>Sailing boat</h4>
         <p>Rent for a day 10$.</p>
       </div>
 
       <div class="card">
-        <img src="https://source.unsplash.com/1600x900/?Kayak" alt="">
-        <h4>kayak</h4>
+        <img src="https://source.unsplash.com/1600x900/?Jetski" alt="">
+        <h4>Jetski</h4>
         <p>Rent for a day 10$.</p>
       </div>
 
       <div class="card">
-        <img src="https://source.unsplash.com/1600x900/?Snowboard" alt="">
-        <h4>Ski</h4>
+        <img src="https://source.unsplash.com/1600x900/?waterski" alt="">
+        <h4>Water Ski</h4>
         <p>Rent for a day 10$.</p>
       </div>
             <div class="card">
-        <img src="https://source.unsplash.com/1600x900/?kite-surf" alt="">
-        <h4>Kite surf</h4>
+        <img src="https://source.unsplash.com/1600x900/?glider, plane" alt="">
+        <h4>Glider</h4>
         <p>Rent for a day 10$.</p>
       </div>
 
       <div class="card">
-        <img src="https://source.unsplash.com/1600x900/?Kayak" alt="">
-        <h4>kayak</h4>
+        <img src="https://source.unsplash.com/1600x900/?windsurf" alt="">
+        <h4>Windsurf</h4>
         <p>Rent for a day 10$.</p>
       </div>
 
       <div class="card">
-        <img src="https://source.unsplash.com/1600x900/?Snowboard" alt="">
-        <h4>Ski</h4>
+        <img src="https://source.unsplash.com/1600x900/?paragliding" alt="">
+        <h4>Paragliding</h4>
         <p>Rent for a day 10$.</p>
       </div>
 

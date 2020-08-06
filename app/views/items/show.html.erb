@@ -23,11 +23,14 @@
     <div class="form col-md-6" id="dates-form">
       <h3>Rent Me!</h3>
       <p>Only for $<%= @item.price_per_day %> per day</p>
+
       <%= simple_form_for([@item, @booking]) do |f| %>
         <%= f.input :start_date, as: :string, input_html: {class: "datepicker" } %>
         <%= f.input :finish_date, as: :string, input_html: {class: "datepicker" } %>
-        <%= f.submit class: "btn btn-primary" %>
+        <%= f.submit "Book", class: "btn btn-primary" %>
       <% end %>
+
+      
     </div>
   </div>
 

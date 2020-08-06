@@ -40,6 +40,7 @@ document.addEventListener('turbolinks:load', () => {
   initflatpicker();
   // flatpickr("#start_date", {});
   // flatpickr("#end_date", {});
+
   initAutocomplete();
 });
 

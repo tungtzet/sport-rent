@@ -4,8 +4,11 @@
   border-radius: 30px;
   text-align: center;
   // padding: 20px;
-  border: 9px solid black;
+  border: 1px solid black;
   box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  margin-bottom: 16px;
+  justify-self: center;
+
 }
 
 // rgb(230,230,230)
@@ -13,8 +16,10 @@
 .card img {
   height: 200px;
   width: auto;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-top-left-radius: 28px;
+  border-top-right-radius: 28px;
+  object-fit: cover;
+
 }
 
 .card h4 {
@@ -45,6 +50,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 16px;
+    justify-content: center;
+
   }
 
   #index-items{

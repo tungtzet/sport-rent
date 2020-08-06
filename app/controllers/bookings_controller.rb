@@ -17,9 +17,14 @@ class BookingsController < ApplicationController
     authorize @booking
   end
 
+
   private
 
+  def set_booking
+    @booking = Booking.find(params[:item_id])
+  end
+
   def booking_params
-    params.require(:booking).permit(:start_date, :finish_date)
+    params.require(:booking).permit(:start_date, :finish_date, :item_id)
   end
 end

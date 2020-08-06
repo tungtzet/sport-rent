@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   resources :items do
     resources :bookings, only: [:create]
   end
-
+  namespace :user do
+    resources :items, only: :index
+  end
   # resources :users, only: [:show]
 
   resources :bookings, only: [:show]

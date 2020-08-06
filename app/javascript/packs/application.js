@@ -37,8 +37,8 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   initMapbox();
-  // flatpickr("#start_date", {});
-  // flatpickr("#finish_date", {});
+  // flatpickr("#booking_start_date", {});
+  // flatpickr("#booking_finish_date", {});
   flatpickr("#home_start_date", {});
   flatpickr("#home_finish_date", {});
   initAutocomplete();

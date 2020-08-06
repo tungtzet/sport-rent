@@ -24,9 +24,9 @@
       <h3>Rent Me!</h3>
       <p>Only for $<%= @item.price_per_day %> per day</p>
 
-      <%= form_for ([@item, @booking]) do |f| %>
-        <%= f.date_field :start_date %>
-        <%= f.date_field :finish_date %>
+      <%= simple_form_for([@item, @booking]) do |f| %>
+        <%= f.input :start_date, as: :string, input_html: {class: "datepicker" } %>
+        <%= f.input :finish_date, as: :string, input_html: {class: "datepicker" } %>
         <%= f.submit "Book", class: "btn btn-primary" %>
       <% end %>
 

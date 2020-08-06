@@ -5,6 +5,11 @@ const initAutocomplete = () => {
   if (addressInput) {
     places({ container: addressInput });
   }
+
+  const addressInputHome = document.getElementById('location-search-home');
+  if (addressInputHome) {
+    places({ container: addressInputHome });
+  }
 };
 
 export { initAutocomplete };

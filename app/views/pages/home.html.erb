@@ -12,8 +12,8 @@
     <%= form_tag items_path, method: :get do %>
       <div class="form-row">
         <div class="col">
-          <%= text_field_tag :sport_type,	          <% sport_types = [["Sky Diving"], ["Sky Surfing"], ["Watersports"], ["Golf"], ["Biking"], ["Motor Racing"], ["Tennis"], ["Hockey"], ["Bungee Jumping"], ["Ice Skating"], ["Skiing"] ] %>
-            params[:sport_type],	          <%= select_tag :sport_type, options_for_select(sport_types), prompt: "Select Sports Category", class: "form-control" %>
+          <%= text_field_tag :sport_type,  
+            params[:sport_type],
             class: "form-control",	
             placeholder: "Find a gear"	
           %>

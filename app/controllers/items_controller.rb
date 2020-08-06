@@ -8,15 +8,16 @@ class ItemsController < ApplicationController
   end
 
   def index
-    @items = Item.geocoded # returns flats with coordinates
-
+    @params = params[:sport_type]
+    @items = policy_scope(Item)
+    @items = policy_scope(Item).search_by_name_and_category_and_description(@params).order(created_at: :desc) if @params.present?
+   
     @markers = @items.map do |item|
       {
         lat: item.latitude,
         lng: item.longitude
       }
     end
-    @items = policy_scope(Item).order(created_at: :desc)
   end
 
   def new

@@ -2,20 +2,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
 <!-- banner section -->
 
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://res.cloudinary.com/dvf1ekp5b/image/upload/v1596720093/uniqsurface-xvjpZDHoEAo-unsplash_qa3vmy.jpg');">
+<div class="banner" id="banner-home" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://res.cloudinary.com/dvf1ekp5b/image/upload/v1596720093/uniqsurface-xvjpZDHoEAo-unsplash_qa3vmy.jpg');">
   <div class="container">
     <h1>Always wanted to try a new sport?</h1> <br>
     <p>Rent sport eqipment for short period from privates  and have fun without spending a fortune!</p>
-    <%= link_to "Explore", items_path, class: "btn-primary" %>
+    <!-- <%= link_to "Explore", items_path, class: "btn-primary" %> -->
 
 
     <%= form_tag items_path, method: :get do %>
       <div class="form-row">
         <div class="col">
-          <%= text_field_tag :sport_type,  
+          <%= text_field_tag :sport_type,
             params[:sport_type],
-            class: "form-control",	
-            placeholder: "Find a gear"	
+            class: "form-control",
+            placeholder: "Find a gear"
           %>
         </div>
         <div class="col">
@@ -24,7 +24,7 @@
             min: Date.today,
             value: Date.today,
             class: "form-control",
-            id: "home_start_date", 
+            id: "home_start_date",
             placeholder: "From"
           %>
         </div>
@@ -34,7 +34,7 @@
             min: Date.today,
             value: Date.today,
             class: "form-control",
-            id: "home_finish_date", 
+            id: "home_finish_date",
             placeholder: "To"
           %>
         </div>
@@ -42,7 +42,7 @@
           <%= text_field_tag :location,
             params[:location],
             class: "form-control",
-            id: "location-search-home", 
+            id: "location-search-home",
             placeholder: "Where?"
           %>
         </div>
@@ -67,9 +67,12 @@
 
   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://res.cloudinary.com/dvf1ekp5b/image/upload/v1596725468/pexels-asad-photo-maldives-3426891_obyjjo.jpg');">
     <div id= "renter" class="container">
-      <h1>Rent from other people without hassle, just few clicks and your item will be reserved.</h1> <br>
+      <h1>Rent from other people without hassle.</h1> <br>
       <p>Talk with the owner and organize the pick up</p>
-      <%= link_to "Explore", items_path, class: "btn-primary" %>
+
+      <div id="btn-explore" >
+        <%= link_to "Explore", items_path, class: "btn-primary" %>
+      </div>
   </div>
   </div>
   <br>
@@ -78,11 +81,15 @@
     <div id="owner" class="container">
       <h1>Don't let your stuff getting dusty in the garage</h1> <br>
       <p>Most of your equipment is not used for 80 % of the time. Rent it and earn some money.</p>
-      <%= link_to "Explore", items_path, class: "btn-primary" %>
+
+      <div id="btn-explore" >
+        <%= link_to "Explore", items_path, class: "btn-primary" %>
+      </div>
   </div>
   </div>
 
-  <h2 class="text-center" id="titles" >Lastest gears to try</h2>
+  <h3 class="text-center" id="titles" >Lastest gears</h3>
+
 
   <!-- cards section  -->
   <div class="container">

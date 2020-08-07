@@ -11,7 +11,7 @@
       <br><p><strong>from: </strong><%=  booking.start_date.to_formatted_s(:long)   %><br><strong>to: </strong> <%= booking.finish_date.to_formatted_s(:long)   %><p>
        <p>
           
-          <%= link_to "🗑", booking_path(booking.id),data: { confirm: 'Are you sure?'}, method: :delete, class: "btn-primary"%>
+          <%= link_to "🗑", booking_path(booking.id),data: { confirm: 'Are you sure?'}, method: :delete, remote: true, class: "btn-primary"%>
        </p>
       </div>
     <% end %>

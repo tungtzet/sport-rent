@@ -11,7 +11,7 @@ class User::ItemPolicy < ApplicationPolicy
   
   
     def index?
-      record.user == user
+      true
     end
   
     def create?

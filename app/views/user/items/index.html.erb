@@ -1,6 +1,6 @@
 <h1 style="text-align:center">My Items</h1>
 
-
+<% if policy(@items).index? %>
 <div class="main-container" id="index-items">
   <div class="container" id="cards-container">
     <div class="cards">
@@ -17,6 +17,7 @@
   </div>
 </div>
 </div>
+<% end %>
 
 
 

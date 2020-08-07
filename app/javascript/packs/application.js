@@ -24,10 +24,11 @@ require("channels")
 
 // External imports
 import "bootstrap";
-import {initflatpicker} from "../plugins/date_picker";
+// import {initflatpicker} from "../plugins/date_picker";
 import 'flatpickr/dist/flatpickr.min.css'
 import { initMapbox } from '../plugins/init_mapbox';
 import { initAutocomplete } from '../plugins/init_autocomplete'
+import { toggleDateInputs } from '../components/booking';
 
 
 // Internal imports, e.g:
@@ -41,9 +42,12 @@ document.addEventListener('turbolinks:load', () => {
   // flatpickr("#booking_finish_date", {});
   // flatpickr("#home_start_date", {});
   // flatpickr("#home_finish_date", {});
-  initflatpicker();
+  toggleDateInputs();
+  // initflatpicker();
   // flatpickr("#start_date", {});
   // flatpickr("#end_date", {});
   initAutocomplete();
 });
+
+
 

@@ -5,6 +5,12 @@ class Item < ApplicationRecord
   has_many :bookings, dependent: :destroy
   has_many_attached :photos
 
+  def unavailable_dates
+    bookings.pluck(:start_date, :finish_date).map do |range|
+      { from: range[0], to: range[1] }
+    end
+  end
+
   include PgSearch::Model
   pg_search_scope :search_by_name_and_category_and_description, 
     against: {

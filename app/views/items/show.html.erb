@@ -24,11 +24,17 @@
       <h3>Rent Me!</h3>
       <p>Only for $<%= @item.price_per_day %> per day</p>
 
-      <%= simple_form_for([@item, @booking]) do |f| %>
-        <%= f.input :start_date, as: :string, input_html: {class: "datepicker" } %>
-        <%= f.input :finish_date, as: :string, input_html: {class: "datepicker" } %>
-        <%= f.submit "Book", class: "btn btn-primary" %>
-      <% end %>
+      <div class="booking-dates" data-unavailable="<%= @item.unavailable_dates.to_json %>">
+        <%= simple_form_for([@item, @booking]) do |f| %>
+          <%= f.error_notification %>
+          <%= f.input :start_date, as: :string, input_html: {class: "datepicker" } %>
+          <%= f.input :finish_date, as: :string, input_html: {class: "datepicker" } %>
+          <%= f.submit "Book", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+
+      
+      
 
       
     </div>

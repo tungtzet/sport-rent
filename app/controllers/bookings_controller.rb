@@ -8,7 +8,10 @@ class BookingsController < ApplicationController
     if @booking.save
       redirect_to booking_path(@booking)
     else
-      render "items/show"
+      # render js: "alert(#{@booking.errors.full_messages.join(',')});"
+      # render html: "<script>alert('No users!')</script>".html_safe
+      render inline: "<p><%= @booking.errors.full_messages.join(',') %></p>"
+      # render "items/show"
     end
   end
 

@@ -52,26 +52,6 @@
       </div>
     <% end %>
 
-    <%# <form>
-    <div class="form-row">
-      <div class="col">
-        <input type="text" class="form-control" placeholder="For which sport?">
-      </div>
-      <div class="col">
-          <input type="text" class="form-control" id="start_date" placeholder="Start date">
-        </div>
-      <div class="col">
-        <input type="text" class="form-control" id="end_date" placeholder="End date">
-      </div>
-      <div class="col-3">
-        <input type="text" class="form-control" id="location-search-home" placeholder="Where?">
-      </div>
-      <div class="col">
-        <a class="btn-secondary" href="#">Go!</a>
-      </div>
-    </div>
-  </form> %>
-
   </div>
 
 
@@ -89,7 +69,7 @@
     <div id= "renter" class="container">
       <h1>Rent from other people without hassle, just few clicks and your item will be reserved.</h1> <br>
       <p>Talk with the owner and organize the pick up</p>
-      <a class="btn-primary" href="#">Explore!</a>
+      <%= link_to "Explore", items_path, class: "btn-primary" %>
   </div>
   </div>
   <br>
@@ -98,7 +78,7 @@
     <div id="owner" class="container">
       <h1>Don't let your stuff getting dusty in the garage</h1> <br>
       <p>Most of your equipment is not used for 80 % of the time. Rent it and earn some money.</p>
-      <a class="btn-primary" href="#">Explore!</a>
+      <%= link_to "Explore", items_path, class: "btn-primary" %>
   </div>
   </div>
 
@@ -107,24 +87,13 @@
   <!-- cards section  -->
   <div class="container">
     <div class="cards">
-
+      <% @items.first(3).each do |item| %>
       <div class="card">
-        <img src="https://res.cloudinary.com/dvf1ekp5b/image/upload/v1596720392/pexels-roger-lagesse-2745761_drqr8j.jpg" alt="">
-        <h4>Wind surf</h4>
-        <p>Rent for a day 25$.</p>
+        <%= cl_image_tag item.photos.first.key if item.photos.first %>
+        <h4><%= item.name %></h4>
+        <p><%= link_to "Rent for $#{item.price_per_day} a day", item_path(item) %></p>
       </div>
-
-      <div class="card">
-        <img src="https://res.cloudinary.com/dvf1ekp5b/image/upload/v1596720317/pexels-asad-photo-maldives-1430672_fgi7oh.jpg" alt="">
-        <h4>kayak</h4>
-        <p>Rent for a day 40$.</p>
-      </div>
-
-      <div class="card">
-        <img src="https://res.cloudinary.com/dvf1ekp5b/image/upload/v1596720315/pexels-pixabay-47356_jgpnaz.jpg" alt="">
-        <h4>Ski</h4>
-        <p>Rent for a day 25$.</p>
-      </div>
+      <% end %>
     </div>
   </div>
 </div>

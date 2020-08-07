@@ -2,9 +2,15 @@
 // banner
 
 h1, h2, h3, h4, p {
-  font-family: 'Open Sans', sans-serif;
+  // font-family: 'Open Sans', sans-serif;
+  font-family: "Work Sans", "Helvetica", "sans-serif";
 }
-
+#btn-explore {
+  position: relative;
+  // margin: auto;
+  top: 120px;
+  text-align: center;
+}
 
 #home-second-ph {
   .banner {
@@ -34,6 +40,8 @@ h1, h2, h3, h4, p {
   padding: 8px 20px;
   border-radius: 50px;
   color: white;
+  border: none;
+
 }
 
 .btn-secondary:hover {
@@ -46,25 +54,19 @@ h1, h2, h3, h4, p {
 }
 
 #titles {
-  border: 1px solid rgb(230,230,230);
-  border-radius: 2px;
-  margin-top: 10px;
-  box-shadow: 0 0 5px rgb(230,230,230);
+  margin-top: 30px;
   padding: 10px;
-
+  color: white;
+  font-weight: bold;
+  font-size: 100px;
 }
-
 
 .footer {
   text-align: center;
   padding: 20px;
   background-color: #white;
-  // position: fixed;
   bottom: 0px;
   width: 100%;
-
-      // background-image: linear-gradient(35deg, #f2fcfe, #1c92d2);
-
 }
 
 .footer a {

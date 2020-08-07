@@ -21,6 +21,8 @@
         <div class="col">
           <%= date_field_tag :start_date,
             params[:start_date],
+            min: Date.today,
+            value: Date.today,
             class: "form-control",
             id: "home_start_date", 
             placeholder: "From"
@@ -29,6 +31,8 @@
         <div class="col">
           <%= date_field_tag :end_date,
             params[:end_date],
+            min: Date.today,
+            value: Date.today,
             class: "form-control",
             id: "home_finish_date", 
             placeholder: "To"

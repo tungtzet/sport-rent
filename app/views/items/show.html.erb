@@ -41,3 +41,15 @@
   </div>
 
 </div>
+
+<script>
+
+function reloadIt() {
+    if (window.location.href.substr(-2) !== "?r") {
+        window.location = window.location.href + "?r";
+    }
+}
+console.log('Reload the page');
+setTimeout(reloadIt(), 1000);
+console.log('Page Reloaded!!!');
+</script>

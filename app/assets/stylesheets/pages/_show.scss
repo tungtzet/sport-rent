@@ -10,27 +10,36 @@
   padding: 20px;
   box-shadow: 0 0 5px rgb(230,230,230);
   // background-color: red;
-}
-
-#showpage {
+  h3 {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+  }
+  p, label {
+    color: white;
+  }
 }
 
 #item-details {
-  border: 2px solid rgb(230,230,230);
-  border-radius: 30px;
+  // border: 2px solid rgb(230,230,230);
+  // border-radius: 30px;
   padding: 20px;
-  box-shadow: 0 0 5px rgb(230,230,230);
+  // box-shadow: 0 0 5px rgb(230,230,230);
 }
 
 #item-deep-details {
-  h3, h4 {
-  border: 2px solid rgb(230,230,230);
-  border-radius: 30px;
-  padding: 20px;
-  box-shadow: 0 0 5px rgb(230,230,230);
+  h3 {
+    color: white;
+    font-weight: bold;
   }
 
-  h5 {
-    text-align: right;
+  h4 {
+    color: white;
+  }
+  h5, h3 {
+    text-align: center;
+    color: white;
+    margin-top: 24px;
+    margin-bottom: 32px;
   }
 }

@@ -1,0 +1,26 @@
+<h1 style="text-align:center">My Bookings</h1>
+
+<% if policy(@bookings).index? %>
+<div class="main-container" id="index-bookings">
+  <div class="container" id="cards-container">
+    <div class="cards">
+    <% @bookings.each do |booking|%>
+     <div class="card">
+      <%= cl_image_tag booking.item.photos.first.key if booking.item.photos.first %>
+      <br><p>Booked from:<%=  booking.start_date %><br> to: <%= booking.finish_date %><p>
+       <p>
+          
+          <%= link_to "🗑", booking_path(booking.id),data: { confirm: 'Are you sure?'}, method: :delete, class: "btn-primary"%>
+       </p>
+      </div>
+    <% end %>
+  </div>
+</div>
+</div>
+<% end %>
+
+
+
+
+
+

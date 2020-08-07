@@ -8,8 +8,10 @@ Rails.application.routes.draw do
   end
   namespace :user do
     resources :items, only: :index
+    resources :bookings, only: :index
   end
   # resources :users, only: [:show]
 
-  resources :bookings, only: [:show]
+  resources :bookings, only: [:show, :destroy, :update]
+  
 end

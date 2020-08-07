@@ -11,6 +11,7 @@ class BookingsController < ApplicationController
       # render js: "alert(#{@booking.errors.full_messages.join(',')});"
       # render html: "<script>alert('No users!')</script>".html_safe
       render inline: "<p><%= @booking.errors.full_messages.join(',') %></p>"
+      # render "items/show"
     end
   end
 

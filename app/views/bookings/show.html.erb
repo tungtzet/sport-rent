@@ -3,7 +3,7 @@
 <div class="banner" id="banner-thank" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://res.cloudinary.com/dvf1ekp5b/image/upload/v1596633022/alex-blajan-gX-bQbm37ZI-unsplash_vcrguw.jpg');">
 <div class="container">
   <h1>Thank you for booking!</h1>
-  <h3>The total price is USD <%= (@booking.finish_date - @booking.start_date)*@booking.item.price_per_day %></h3>
+  <h3>The total price is USD <%= (@booking.finish_date - @booking.start_date).to_i*@booking.item.price_per_day %></h3>
   <p>A confirmation will be sent to: <%= @booking.user.email %></p>
 </div>
 </div>
